@@ -1,9 +1,8 @@
 //import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-//import LangugaeContext from './../context/language';
 import React from "react";
 export default function Navbar() {
-  //const { lang } = useContext(LangugaeContext);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
