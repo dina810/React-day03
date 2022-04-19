@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ProductCard(props) {
+export default function MovieCard(props) {
     console.log(props)
   return (
     <div className="card h-100">
@@ -9,7 +9,7 @@ export default function ProductCard(props) {
       <div className="card-body">
         <h5 className="card-title">{props.data.title}</h5>
         <p className="card-text">{props.data.price}</p>
-        <Link to={`/product-details/${props.data.id}`} className="btn btn-primary">
+        <Link to={`/movie-details/${props.data.id}`} className="btn btn-primary">
           Go to details
         </Link>
       </div>

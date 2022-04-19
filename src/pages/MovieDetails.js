@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axiosInstance from "../network/axios";
 
-export default function ProductDetails() {
+export default function MovieDetails() {
   const [productDetails, setProductDetails] = useState({});
   const params = useParams();
   console.log(params);

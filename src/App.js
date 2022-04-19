@@ -1,8 +1,8 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import NotFound from './pages/NotFound';
-import Product from './pages/Product'
-import ProductDetails from './pages/ProductDetails'
+import Movie from './pages/Movie'
+import MovieDetails from './pages/MovieDetails'
 
 
 import React from "react";
@@ -12,8 +12,8 @@ function App() {
     <BrowserRouter>
     <Navbar/>
     <Routes>
-      <Route path='/' element={<Product/>}/>
-      <Route path='/product-details/:id'  element={<ProductDetails/>}/>
+      <Route path='/' element={<Movie/>}/>
+      <Route path='/product-details/:id'  element={<MovieDetails/>}/>
       <Route path='*' element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>

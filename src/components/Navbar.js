@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <Link className="nav-link active" aria-current="page" to="/">
-              Product
+            Movie
             </Link>
             {/* <Link className="nav-link active" aria-current="page" to="/product-details">
             ProductDetails

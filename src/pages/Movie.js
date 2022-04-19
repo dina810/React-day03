@@ -1,10 +1,10 @@
 import React from "react";
 import  { useEffect, useState } from "react";
-import ProductCard from "./../components/ProductCard";
+import MovieCard from "../components/MovieCard";
 import axiosInstance from "../network/axios";
 
-export default function Product() {
-  const [products, setProducts] = useState([]);
+export default function Movie() {
+  const [movies, setMovies] = useState([]);
   useEffect(() => {
     axiosInstance
       //   .post(
@@ -20,20 +20,20 @@ export default function Product() {
       //       headers: {},
       //     }
       //   )
-      .get("/products")
-      .then((res) => setProducts(res.data))
+      .get("/Movies")
+      .then((res) => setMovies(res.data))
 
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <div>
-      <h3>Products List</h3>
+      <h3>Movies List</h3>
       <div className="row row-cols-1 row-cols-md-3 g-4">
-        {products.map((product) => {
+        {movies.map((movie) => {
           return (
-            <div className="col mb-4" key={product.id}>
-              <ProductCard data={product} />
+            <div className="col mb-4" key={movie.id}>
+              <MovieCard data={movie} />
             </div>
           );
         })}

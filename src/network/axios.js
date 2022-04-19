@@ -1,13 +1,17 @@
 import axios from "axios";
 const axiosInstance = axios.create({
-    baseURL: "https://fakestoreapi.com",
-  });
+  baseURL : "https://api.themoviedb.org/3",
+  params : {
+      api_key : "0b52320f678aed44db23b519ac09ff86"
+  }
+});
+
 // Add a request interceptor
 axiosInstance.interceptors.request.use(
     function (config) {
       console.log(config);
       config.headers["Authorization"] =
-        "Bearer ds34das56d4a5sd4a6s5d4as56d4as2d1asx5s4x";
+        "Bearer dddds34das56d4a5sd4a6s5d4as56d4as2d1asx5s4x";
       // Do something before request is sent
       return config;
     },
