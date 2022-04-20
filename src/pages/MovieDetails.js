@@ -3,26 +3,27 @@ import { useParams } from "react-router-dom";
 import axiosInstance from "../network/axios";
 
 export default function MovieDetails() {
-  const [productDetails, setProductDetails] = useState({});
+  const [movie, setMovie] = useState({});
+
   const params = useParams();
   console.log(params);
   useEffect(() => {
     axiosInstance
-      .get(`/products/${params.id}`)
+      .get(`/movie/${params.id}`)
       .then((res) => {
         console.log(res);
-        setProductDetails(res.data);
+        setMovie(res.data);
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <>
-      <div>ProductDetails</div>
+      <div>MovieDetails</div>
 
-      <h2>{productDetails.title}</h2>
-      <p>{productDetails.description}</p>
-      <small>Price : {productDetails.price}</small>
+      <h2>{setMovie.title}</h2>
+      <p>{setMovie.description}</p>
+      <small>Price : {setMovie.price}</small>
     </>
   );
 }

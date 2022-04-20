@@ -25,9 +25,6 @@ export default function Navbar() {
             <Link className="nav-link active" aria-current="page" to="/">
             Movie
             </Link>
-            {/* <Link className="nav-link active" aria-current="page" to="/product-details">
-            ProductDetails
-            </Link> */}
           </div>
         </div>
       </div>
